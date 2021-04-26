@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        </title>
+    </head>
+    <style>
+    
+       
+body {
+    text-align: center
+}
+ #val1{
+     background-color:rgb(188, 188, 226);
+ }
+ #val2{
+     background-color:rgb(188, 188, 226);
+ }
+h1 {
+    text-decoration: underline
+}
+ 
+.nour2{
+    display: flex;
+    flex-direction: row;
+    border : solid black;
+    width:100%;
+    
+    
+}
+ 
+.nour1 {
+    display:flex;
+    background-color:rgb(207, 204, 204);
+    width : 50%;
+    background-image: url("https://img.freepik.com/vecteurs-libre/belles-etincelles-brillent-lumiere-speciale-scintille-fond-transparent-abstrait-belle-illustration-pour-carte-postale-arriere-plan-image_220217-2551.jpg?size=626&ext=jpg");
+}
+#res{
+    height:100px;
+    width:49.5%;
+    border : solid black;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3Shg_WBrmIEmPFRWRGI5Yz4CSpBqTlkB78IxdPbFvCwQ0eLCUGFIEgSeWMIYSNmDTNY&usqp=CAU");
+}
+    </style>
+<body>
+    <h1><i>Calculatrice</i></h1>
+    <div class="nour1">
+        <div class="nour2">
+            <div class="nour3">
+            <p>
+               <p><b>entrer la 1iere valeur:</b><input id="val1" ></p>
+               <p> <b>entrer la deuxieme valeur:</b><input id="val2"></p>
+               <button id="addition" onclick="Addition()">+</button>
+               <button id="multiplication" onclick="multiplication()">*</button>
+               <button id="soustraction" onclick="soustraction()">-</button>
+               <button id="division" onclick="division()">/</button>
+            </p>
+            </div>
+        </div>
+    </div>
+    <div id="res">
+</div>
+    <script type="text/javascript">
+        document.getElementById("addition").addEventListener("click",function(){
+            var v1=parseInt(document.getElementById("val1").value);
+            var v2=parseInt(document.getElementById("val2").value);
+            document.getElementById("res").innerHTML=v1+v2;
+            
+        })
+        document.getElementById("multiplication").addEventListener("click",function(){
+            var v1=parseInt(document.getElementById("val1").value);
+            var v2=parseInt(document.getElementById("val2").value);
+            document.getElementById("res").innerHTML=v1*v2;
+            
+        })
+        document.getElementById("soustraction").addEventListener("click",function(){
+            var v1=parseInt(document.getElementById("val1").value);
+            var v2=parseInt(document.getElementById("val2").value);
+            document.getElementById("res").innerHTML=v1-v2;
+            
+        })
+        document.getElementById("division").addEventListener("click",function(){
+            var v1=parseInt(document.getElementById("val1").value);
+            var v2=parseInt(document.getElementById("val2").value);
+            document.getElementById("res").innerHTML=v1/v2;
+            
+        })
+    </script>
+</div>
+</body>
+</html>
